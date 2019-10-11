@@ -10,7 +10,6 @@ describe('Log in to The Data Refinery', () => {
         login.click()
         browser.waitUntil(() => browser.getUrl() === 'https://thedatarefinery.co.uk/login');
         assert.equal(browser.getUrl(), 'https://thedatarefinery.co.uk/login')
-        browser.pause(1000)
         const loginPage = browser.$('data-refinery').shadow$('login-page');
         const email = loginPage.shadow$('input[name="email"]')
         email.addValue('admin@thedatarefinery.co.uk');

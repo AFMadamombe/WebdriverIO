@@ -1,4 +1,4 @@
-/*const assert = require('assert')
+const assert = require('assert')
 
 describe('Sign up to The Data Refinery', () => {
     it('Should enable user to sign up with correct credentials', () => {
@@ -14,20 +14,17 @@ describe('Sign up to The Data Refinery', () => {
 
         //click on the element button 
         signUp.click()
-        browser.pause(3000)
-
+        
         //Select the Unlimited records, 1 User from the drop down
         const packageElement = browser.$('data-refinery').shadow$('register-page').shadow$('packages-element').shadow$('package-element')
         const dropdown = packageElement.shadow$('select')
         dropdownValue = dropdown.selectByIndex(0)
         //dropdown.selectByAttribute('value', '1')
-        browser.pause(1000)
-
+        
         //Click on the Join now button 
         const formButton = packageElement.shadow$("form-button")
         formButton.click()
-        browser.pause(2000)
-
+       
         //Enter sign up
         const registerTextBox = browser.$("data-refinery").shadow$("register-page").shadow$("register-form")
 
@@ -40,14 +37,11 @@ describe('Sign up to The Data Refinery', () => {
         lastName.addValue('Watts')
         companyName.addValue('Elf Chatter')
         email.addValue('alanwatts1221341@gmail.com')
-        browser.pause(5000)
-
+        
         //Click submit button
         const submitButton = registerTextBox.shadow$('form-button[id=btn')
         //submitButton.click()
-        browser.pause(1000)
-              
-
+                      
         browser.closeWindow()
     })
-})*/
+})
